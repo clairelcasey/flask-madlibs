@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Madlibs! {% endblock %}
+
+{% block content %}
+
+<h1 class="pt-4 mb-3 text-center">What type of story would you like?</h1>
+<form action="/form" class="pb-4">
+    <select name="stories" >
+        <option value="">Please choose a story type</option>
+        <!-- <option value="silly">Silly Story</option>
+        <option value="excited">Excited Story</option> -->
+        {% for story in storiesList %}
+            <option value="{{ story }}">{{ story }}</option>
+        {% endfor %}
+    </select>
+    <button>Start Madlib</button>
+</form>
+{% endblock %}
