@@ -31,7 +31,7 @@ class Story:
 
         for (key, val) in answers.items():
             text = text.replace("{" + key + "}", val)
-
+                        # replace ({verb}, "eat")
         return text
 
 
@@ -42,6 +42,7 @@ silly_story = Story(
     """Once upon a time, in a long-ago {place}, there lived an exceptionally
        {adjective} {noun}. It loved to {verb} with {plural_noun}."""
 )
+
 
 # Here's another --- you should be able to swap in app.py to use this story,
 # and everything should still work
